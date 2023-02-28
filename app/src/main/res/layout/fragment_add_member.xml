@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.FragmentAddMember">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgPic"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.178"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+        app:srcCompat="@drawable/boy" />
+
+    <ImageView
+        android:id="@+id/imgTakeImage"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_camera"
+        app:layout_constraintBottom_toBottomOf="@+id/imgPic"
+        app:layout_constraintEnd_toEndOf="@+id/imgPic"
+        app:layout_constraintStart_toStartOf="@+id/imgPic"
+        app:layout_constraintTop_toTopOf="@+id/imgPic"
+        app:layout_constraintVertical_bias="1.1" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgIDPic1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.033"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+        app:srcCompat="@drawable/document" />
+
+    <ImageView
+        android:id="@+id/imgTakeIDImage1"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_camera"
+        app:layout_constraintBottom_toBottomOf="@+id/imgIDPic1"
+        app:layout_constraintEnd_toEndOf="@+id/imgIDPic1"
+        app:layout_constraintStart_toStartOf="@+id/imgIDPic1"
+        app:layout_constraintTop_toTopOf="@+id/imgIDPic1"
+        app:layout_constraintVertical_bias="1.2" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgIDPic2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.193"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+        app:srcCompat="@drawable/document" />
+
+    <ImageView
+        android:id="@+id/imgTakeIDImage2"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_camera"
+        app:layout_constraintBottom_toBottomOf="@+id/imgIDPic2"
+        app:layout_constraintEnd_toEndOf="@+id/imgIDPic2"
+        app:layout_constraintStart_toStartOf="@+id/imgIDPic2"
+        app:layout_constraintTop_toBottomOf="@+id/imgTakeIDImage1"
+        app:layout_constraintVertical_bias="1.2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPic"
+        app:layout_constraintVertical_bias="0.023">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                android:layout_marginTop="10dp"
+                android:inputType="text|textCapSentences"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:id="@+id/edtFirstName"
+
+                tools:ignore="Autofill,HardcodedText" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Last Name"
+                    android:layout_marginTop="10dp"
+                    android:inputType="text|textCapSentences"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:id="@+id/edtLastName"
+
+                    tools:ignore="Autofill,HardcodedText" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gender : "
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        tools:ignore="HardcodedText" />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/radioGroup"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="Male"
+                            android:checked="true"
+                            android:id="@+id/rdMale"/>
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="Female"
+                            android:layout_marginStart="10dp"
+                            android:id="@+id/rdFemale"/>
+                    </RadioGroup>
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Age"
+                    android:layout_marginTop="10dp"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:id="@+id/edtAge"
+                    tools:ignore="Autofill,HardcodedText" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Weight"
+                    android:layout_marginTop="10dp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="6"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:id="@+id/edtWeight"
+                    tools:ignore="Autofill,HardcodedText" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile"
+                    android:layout_marginTop="10dp"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:id="@+id/edtMobile"
+                    tools:ignore="Autofill,HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edtAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Address"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:visibility="invisible"
+                    tools:ignore="Autofill,HardcodedText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="Date of Joining"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:id="@+id/edtJoining"
+                        android:enabled="false"
+                        tools:ignore="Autofill,HardcodedText,TextFields" />
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_calendar"
+                        android:id="@+id/imgPicDate"/>
+
+                </LinearLayout>
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="1">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Membership : "-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:layout_weight="0.7"-->
+<!--                        android:textColor="@color/black"/>-->
+
+<!--                    <Spinner-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="0.3"-->
+<!--                        android:id="@+id/spMembership"-->
+<!--                        android:entries="@array/membership"-->
+<!--                        style="@style/Widget.AppCompat.Spinner.Underlined"-->
+<!--                        android:backgroundTint="@color/drop_down_icon"/>-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:gravity="center"-->
+<!--                    android:weightSum="1">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Expires on : "-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:layout_weight="0.7"-->
+<!--                        android:textColor="@color/black"/>-->
+<!--                    <EditText-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="0.3"-->
+<!--                        android:inputType="date"-->
+<!--                        android:enabled="false"-->
+<!--                        android:textSize="15sp"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:id="@+id/edtExpire"-->
+<!--                        tools:ignore="Autofill,LabelFor" />-->
+
+<!--                </LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="Date of Expiry"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:id="@+id/edtExpire"
+                        android:enabled="false"
+                        tools:ignore="Autofill,HardcodedText,TextFields" />
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_calendar"
+                        android:id="@+id/imgPicDateExpiry"/>
+
+                </LinearLayout>
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:gravity="center"-->
+<!--                    android:weightSum="1">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Discount : "-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:layout_weight="0.7"-->
+<!--                        android:textColor="@color/black"/>-->
+<!--                    <EditText-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="0.3"-->
+<!--                        android:inputType="numberDecimal"-->
+<!--                        android:textSize="15sp"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:id="@+id/edtDiscount"-->
+<!--                        tools:ignore="Autofill,HardcodedText,LabelFor"-->
+<!--                        android:gravity="end"-->
+<!--                        android:text="0.00"/>-->
+
+<!--                </LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Amount : "
+                        android:textSize="16sp"
+                        android:layout_weight="0.7"
+                        android:textColor="@color/black"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:inputType="numberDecimal"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:id="@+id/edtAmount"
+                        tools:ignore="Autofill,HardcodedText,LabelFor"
+                        android:gravity="end"
+                        android:hint="0.00"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Extra Description : "
+                        android:textSize="16sp"
+                        android:layout_weight="0.7"
+                        android:textColor="@color/black"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:id="@+id/edtDescription"
+                        tools:ignore="Autofill,HardcodedText,LabelFor"
+                        android:gravity="end"/>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="@string/save"
+                        android:id="@+id/btnAddMemberSave"
+                        android:background="@color/purple_500"
+                        android:layout_marginEnd="5dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="Delete"
+                        android:id="@+id/btnDelete"
+                        android:background="@color/purple_500"
+                        android:layout_marginEnd="5dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="@string/active"
+                        android:id="@+id/btnActiveInactive"
+                        android:background="@color/purple_500"
+                        android:layout_marginStart="5dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        tools:ignore="ButtonStyle" />
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

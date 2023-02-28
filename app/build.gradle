@@ -1,0 +1,69 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+
+    buildFeatures {
+        viewBinding = true
+    }
+    compileSdkVersion 33
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        configurations.all {
+            resolutionStrategy { force 'androidx.core:core-ktx:1.6.0' }
+        }
+        applicationId "com.example.primefitness"
+        minSdkVersion 16
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+
+}
+
+repositories {
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation('org.jetbrains.kotlin:kotlin-reflect:1.5.21')
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.exifinterface:exifinterface:1.3.0-alpha01'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.github.florent37:runtime-permission:1.1.2' //for runtime permission
+    implementation 'com.github.bumptech.glide:glide:4.10.0' //show images
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6' //view database
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1" //for viewModelScope
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1" //forlifecycleScope
+    implementation 'com.squareup.picasso:picasso:2.6.0-SNAPSHOT'
+//    implementation 'com.ajts.androidmads.sqliteimpex:library:1.0.0'
+}

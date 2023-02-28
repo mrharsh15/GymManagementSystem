@@ -1,0 +1,15 @@
+find transport id using adb devices -l
+
+adb -t Transport_ID backup -f [backup_name].adb -noapk com.example.primefitness
+
+this is the backup without apk (for apk do -apk), you can backup apk as well but when restoring apk is not installed automatically,
+but take whole backup with apk, then you have the apk as well.
+
+to restore, firstly the apk should be installed, then
+adb -t Transport_ID restore [backup_name].adb
+
+in wsl, to extract .adb
+dd if=[backup_name].adb bs=24 skip=1 | zlib-flate -uncompress | tar xf -
+stored in apps folder
+
+find out how to compress them again
